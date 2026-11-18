@@ -1,0 +1,150 @@
+/* css reset */
+
+/* 1. Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 500ms ease-in-out;
+}
+
+/* 2. Remove default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Smooth scroll and base body setup */
+html,
+body {
+  scroll-behavior: smooth;
+  
+}
+
+
+body {
+ 
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Core media/responsive styling */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 5. Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* 6. Avoid text overflow frustrations */
+p {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.link,
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  font-family:Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+
+  margin-inline: auto;
+
+  /* variable declarations */
+  /* color variables */
+  --primary-font-clr: hsl(0, 0%, 20%);
+  --secondary-font-clr: hsl(0, 0%, 90%);
+  --primary-bkgrnd-clr: hsl(0, 0%, 80%);
+  --secondary-bkgrnd-clr: hsl(0, 0%, 50%);
+  --accent-clr: hsl(39, 100%, 58%);
+
+  /* number variables */
+  --max-width: 1920px;
+  --header-height: 60px;
+
+}
+
+.body-wrapper{
+    max-width: 98%;
+    margin-inline: auto;
+    padding-top: 1rem;
+}
+
+.cabinet-scene {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.cabinet-scene img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Adjust these percentages to match the cabinet opening in your image. */
+.cabinet-door {
+  position: absolute;
+  left: 7.5%;
+  top: 23%;
+  width: 28%;
+  height: 59%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  transform: rotateY(0deg);
+  transform-origin: left center; /* Hinge on left; use right center if needed */
+  transition: transform 700ms ease;
+  transform-style: preserve-3d;
+}
+
+.cabinet-door.is-open {
+  transform: rotateY(-100deg);
+}
+
+.door-face {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #65624f; /* Match the cabinet finish */
+  border: 1px solid rgba(30, 30, 25, 0.35);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cabinet-door {
+    transition: none;
+  }
+}
