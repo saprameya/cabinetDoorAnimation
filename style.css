@@ -128,10 +128,22 @@ body {
   transform-origin: left center; /* Hinge on left; use right center if needed */
   transition: transform 700ms ease;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-font-clr);
+  font-size: 2rem;
+}
+
+.cabinet-door span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cabinet-door.is-open {
   transform: rotateY(-100deg);
+  color: transparent;
 }
 
 .door-face {
