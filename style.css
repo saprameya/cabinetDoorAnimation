@@ -159,6 +159,9 @@ main::after{
   align-items: center;
   color: var(--secondary-font-clr);
   font-size: 2rem;
+   @media (width < 500px) {
+    font-size: 1rem;
+  }
 }
 
 
@@ -183,6 +186,7 @@ main::after{
   border: 1px solid rgba(30, 30, 25, 0.35);
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
   opacity: 1;
+ 
 }
 
 .opened-door{
@@ -196,7 +200,7 @@ main::after{
   color: var(--secondary-font-clr);
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
+  padding-top: 5%;
   cursor: pointer;
 }
 
