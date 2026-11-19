@@ -102,6 +102,8 @@ main{
   position: relative;
 }
 
+.inside,
+.middle,
 .front{
   position: absolute;
   inset: 0;
@@ -110,13 +112,13 @@ main{
   
 }
 
+.middle.disappear,
 .front.disappear{
   opacity: 0;
 }
 
 .click-front{
-  transform: translate(40%, -5vh);  
+  transform: translate(35%, 35vh);  
   font-size: 2rem;
-  bottom: 20%;
   color: var(--secondary-font-clr);
 }
