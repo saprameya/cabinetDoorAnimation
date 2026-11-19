@@ -107,8 +107,16 @@ main{
   inset: 0;
   opacity: 1;
   cursor: pointer;
+  
 }
 
 .front.disappear{
   opacity: 0;
+}
+
+.click-front{
+  transform: translate(40%, -5vh);  
+  font-size: 2rem;
+  bottom: 20%;
+  color: var(--secondary-font-clr);
 }
