@@ -100,6 +100,7 @@ body {
 
 main{
   position: relative;
+  height: 20vh;
 }
 
 .inside,
@@ -118,9 +119,17 @@ main{
 }
 
 .click-front{
-  width: 473px;
-  transform: translate(0, 35vh);
-  margin-inline: auto;  
+  position: fixed;
+  z-index: 10;
+  text-align: center;
   font-size: 2rem;
   color: var(--secondary-font-clr);
+  width: 1280px;
+ @media (width < 1280px) {
+  width: 100vw;
+ }
+  @media (width < 500px) {
+    color: black;
+  }
+
 }
