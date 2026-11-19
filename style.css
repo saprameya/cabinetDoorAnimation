@@ -118,7 +118,9 @@ main{
 }
 
 .click-front{
-  transform: translate(35%, 35vh);  
+  width: 473px;
+  transform: translate(0, 35vh);
+  margin-inline: auto;  
   font-size: 2rem;
   color: var(--secondary-font-clr);
 }
