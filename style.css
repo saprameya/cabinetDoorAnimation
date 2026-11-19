@@ -88,6 +88,8 @@ body {
   --max-width: 1920px;
   --header-height: 60px;
 
+  color: var(--primary-font-clr);
+
 }
 
 .body-wrapper{
@@ -97,123 +99,16 @@ body {
 }
 
 main{
-  display: flex;
-  justify-content: center;
-  
-}
-
-
-main::after{
-  position: absolute;
-  content: "";
-  inset: 0;
-  z-index: -1;
-  background:  linear-gradient(hsl(52, 12%, 35%, 0.5), hsl(52, 12%, 35%, 1)),
-  url('hero-background.webp') center / cover no-repeat;
-  mix-blend-mode: multiply;
-  
-}
-
-
-
-
-
-.cabinet-scene {
   position: relative;
-  width: 100%;
-  max-width: 1200px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  perspective: 1200px;
-  margin-top: 5rem;
-  box-shadow: 5px 5px 15px;
-  border: 2px solid;
 }
 
-.cabinet-scene img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-
-}
-
-/* Adjust these percentages to match the cabinet opening in your image. */
-.cabinet-door {
+.front{
   position: absolute;
-  left: 7.5%;
-  top: 23%;
-  width: 28%;
-  height: 59%;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  z-index: 10;
-  transform: rotateY(0deg);
-  transform-origin: left center; /* Hinge on left; use right center if needed */
-  transition: transform 700ms ease;
-  transform-style: preserve-3d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--secondary-font-clr);
-  font-size: 2rem;
-   @media (width < 500px) {
-    font-size: 1rem;
-  }
-}
-
-
-
-.cabinet-door span{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cabinet-door.is-open {
-  transform: rotateY(-100deg);
-  color: transparent;
-}
-
-
-.door-face {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: #65624f; /* Match the cabinet finish */
-  border: 1px solid rgba(30, 30, 25, 0.35);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.16);
+  inset: 0;
   opacity: 1;
- 
-}
-
-.opened-door{
-  position: absolute;
-  left: 7.5%;
-  top: 23%;
-  width: 28%;
-  height: 59%;
-  padding: 0;
-  border: 0;
-  color: var(--secondary-font-clr);
-  display: flex;
-  justify-content: center;
-  padding-top: 5%;
   cursor: pointer;
 }
 
-.cabinet-scene.zoom-in{
-  transform: scale(1.5);
-}
-
-.door-face.zoomed{
+.front.disappear{
   opacity: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .cabinet-door {
-    transition: none;
-  }
 }
