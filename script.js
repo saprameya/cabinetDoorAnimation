@@ -1,7 +1,11 @@
+const clickFront = document.querySelector(".click-front");
 const front = document.querySelector(".front");
 const middle = document.querySelector(".middle");
 const inside = document.querySelector(".inside");
 console.log(inside);
+
+
+
 
 front.addEventListener("click", () => {
   front.classList.add("disappear");

@@ -99,37 +99,26 @@ body {
 }
 
 main{
-  position: relative;
-  height: 20vh;
+  width: fit-content;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: [main-start] 1fr [main-end];
+  grid-template-rows: [main-start] 1fr [main-end];
 }
 
 .inside,
 .middle,
 .front{
-  position: absolute;
-  inset: 0;
-  opacity: 1;
+  grid-area: main-start/main-start/main-end/main-end;
   cursor: pointer;
-  
-}
-
-.middle.disappear,
-.front.disappear{
-  opacity: 0;
 }
 
 .click-front{
-  position: fixed;
-  z-index: 10;
-  text-align: center;
+  grid-area:  main-start/main-start/main-end/main-end;
+  align-self: center;
+  justify-self: self-end;
+  margin-right: 20%;
   font-size: 2rem;
-  color: var(--secondary-font-clr);
-  width: 1280px;
- @media (width < 1280px) {
-  width: 100vw;
- }
-  @media (width < 500px) {
-    color: black;
-  }
-
+  color: yellow;
 }
+
